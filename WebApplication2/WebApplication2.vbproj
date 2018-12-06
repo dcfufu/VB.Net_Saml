@@ -268,7 +268,6 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\keycloakSamlServlet\saml.vbhtml" />
-    <Content Include="upload.gitattributes" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
