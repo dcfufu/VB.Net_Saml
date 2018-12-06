@@ -1,43 +1,36 @@
-¦¹±M®×¬°
-¤@­ÓÂ²©öC#.NET MVC ±M®×
-Framework 4.5
+æ­¤å°ˆæ¡ˆç‚º
+ä¸€å€‹ç°¡æ˜“VB.NET MVC å°ˆæ¡ˆ
+Framework 4.7
 
-±M®×«Ø¥ß«á
-§Q¥ÎNuGet®M¥ó¡A¤U¸ü¦W¬°" AspNetSaml" ®M¥ó
-·|¥X²{ Saml.cs ÀÉ®×
 
-¨Ì·Ó¿ù»~°T®§¡A±N±M®×»İ­nªº Dependency ¥[¤J
 
-«Ø¥ß¤@­Ó·sªºcontroller
-©R¦W»İ­n²Å¦X keycloak «ü©wªº saml client ¤Wªº master url ³]­p¸ô®|
 
-°Ñ¦Ò https://github.com/jitbit/AspNetSaml/
+æœ¬å°ˆæ¡ˆåƒè€ƒ https://github.com/jitbit/AspNetSaml/ ä»¥VB.NETå¯¦ä½œ
 
-¦bcontroller¸Ì¡A¥[¤J¤W¤è³sµ²¸Ìªºµ{¦¡
-§ó·s samlEndpoint¡Bclient name¡Bredirect url
+å»ºç«‹ä¸€å€‹æ–°çš„controller
+å‘½åéœ€è¦ç¬¦åˆ keycloak æŒ‡å®šçš„ saml client ä¸Šçš„ master url è¨­è¨ˆè·¯å¾‘
 
-³q¹L keycloak ¾É¦^¤§«á¶i¨ì¥t¤@­Ó¦Û­q¤èªk
-samlCertificate ³B­×§ï¦¨ keycloak ¤Wµ¹¤©ªº certificate
+åœ¨controllerè£¡ï¼ŒåŠ å…¥ä¸Šæ–¹é€£çµè£¡çš„ç¨‹å¼
+æ›´æ–° samlEndpointã€client nameã€redirect url
 
-¥Ø«e¦]¬°ª©¥»Ãö«Y¡ASaml.cs ¤º®e¦b IsValid() ³Bµy§@­×§ï
-signedXml.CheckSignature(_certificate.cert, true) ­×§ï¬° signedXml.CheckSignature()
+é€šé keycloak å°å›ä¹‹å¾Œé€²åˆ°å¦ä¸€å€‹è‡ªè¨‚æ–¹æ³•
+samlCertificate è™•ä¿®æ”¹æˆ keycloak ä¸Šçµ¦äºˆçš„ certificate
 
-³q¹LÅçÃÒ«á
-µ{¦¡¶i¦æ XML ¸ê®Æ§ì¨ú
-±N­ì¥» Saml.cs ¤º¥H¤U¤èªk¡A°µ­×§ï
+ç›®å‰å› ç‚ºç‰ˆæœ¬é—œä¿‚ï¼ŒSaml.cs å…§å®¹åœ¨ IsValid() è™•ç¨ä½œä¿®æ”¹
+signedXml.CheckSignature(_certificate.cert, true) ä¿®æ”¹ç‚º signedXml.CheckSignature()
+
+é€šéé©—è­‰å¾Œ
+ç¨‹å¼é€²è¡Œ XML è³‡æ–™æŠ“å–
+å°‡åŸæœ¬ Saml.cs å…§ä»¥ä¸‹æ–¹æ³•ï¼Œåšä¿®æ”¹
 GetNameID();
 GetEmail();
 GetFirstName();
 GetLastName();
 
-»İ­n¹ïÀ³¨ì keycloak ¤W­±³]©w
-¥ş³¡ Attribute §ï§ì FriendlyName
+éœ€è¦å°æ‡‰åˆ° keycloak ä¸Šé¢è¨­å®š
+å…¨éƒ¨ Attribute æ”¹æŠ“ FriendlyName
 
-¦Û­q·s¼W GetDisplayname() §ì¨ú displayname
+è‡ªè¨‚æ–°å¢ GetDisplayname() æŠ“å– displayname
 
-³Ì«á
-±N©Ò¦³§ì¨ú¥X±o­È¡AÅã¥Ü©ó­¶­±¤W
-
-
-log out ³¡¤À¡A©|¥¼´ú¸Õ¦¨¥\
-¥Ø«eª½±µ¾É¦Vµn¥X SAM https://10.1.4.71/pkmslogout
+æœ€å¾Œ
+å°‡æ‰€æœ‰æŠ“å–å‡ºå¾—å€¼ï¼Œé¡¯ç¤ºæ–¼é é¢ä¸Š
