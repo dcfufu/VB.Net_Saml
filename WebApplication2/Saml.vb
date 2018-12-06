@@ -51,13 +51,6 @@ Namespace Saml
         End Sub
 
         Private Function StringToByteArray(ByVal st As String) As Byte()
-            ' Dim bytes As Byte() = New Byte(st.Length - 1) {}
-
-            ' For i As Integer = 0 To st.Length - 1
-            'bytes(i) = ASCIIEncoding().GetBytes(st(i))
-            'Next
-
-            'Return bytes
             Dim encoding As New System.Text.ASCIIEncoding()
             Return encoding.GetBytes(st)
         End Function
