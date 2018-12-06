@@ -27,7 +27,13 @@ MIICnTCCAYUCBgFmhO43OzANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdUS1VTQU1MMB4XDTE4MTAx
 -----END CERTIFICATE-----"
             Dim samlResponse As Saml.Response = New Saml.Response(samlCertificate)
             ViewBag.response = Request.Form("SAMLResponse")
-            samlResponse.LoadXmlFromBase64(Request.Form("SAMLResponse"))
+            Try
+                samlResponse.LoadXmlFromBase64(Request.Form("SAMLResponse"))
+            Catch ex As Exception
+                Response.Redirect("~/")
+                Return View()
+            End Try
+
 
             If samlResponse.IsValid() Then
                 Dim nameID, email, firstname, lastname, displayname As String
@@ -45,6 +51,7 @@ MIICnTCCAYUCBgFmhO43OzANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdUS1VTQU1MMB4XDTE4MTAx
                 ViewBag.username = firstname & "  " & lastname
                 ViewBag.email = email
                 ViewBag.displayname = displayname
+
             End If
 
             Return View()

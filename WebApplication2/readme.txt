@@ -1,17 +1,14 @@
 此專案為
-一個簡易C#.NET MVC 專案
-Framework 4.5
+一個簡易VB.NET MVC 專案
+Framework 4.7
 
-專案建立後
-利用NuGet套件，下載名為" AspNetSaml" 套件
-會出現 Saml.cs 檔案
 
-依照錯誤訊息，將專案需要的 Dependency 加入
+
+
+本專案參考 https://github.com/jitbit/AspNetSaml/ 以VB.NET實作
 
 建立一個新的controller
 命名需要符合 keycloak 指定的 saml client 上的 master url 設計路徑
-
-參考 https://github.com/jitbit/AspNetSaml/
 
 在controller裡，加入上方連結裡的程式
 更新 samlEndpoint、client name、redirect url
@@ -37,7 +34,3 @@ GetLastName();
 
 最後
 將所有抓取出得值，顯示於頁面上
-
-
-log out 部分，尚未測試成功
-目前直接導向登出 SAM https://10.1.4.71/pkmslogout
