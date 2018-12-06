@@ -2,6 +2,7 @@
     ViewData("Title") = "Success"
 End Code
 
+<h2>nameID: @ViewData("nameID").</h2>
 <h2>username: @ViewData("username").</h2>
 <h2>email: @ViewData("email").</h2>
 <h2>displayname: @ViewData("displayname").</h2>
