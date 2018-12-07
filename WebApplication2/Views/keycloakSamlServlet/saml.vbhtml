@@ -7,4 +7,5 @@ End Code
 <h2>email: @ViewData("email").</h2>
 <h2>displayname: @ViewData("displayname").</h2>
 
+<h2>user_id_jsonTest: @ViewData("user_id_jsonTest").</h2>
 <p><a href="/keycloakSamlServlet/Logout" class="btn btn-primary btn-lg">Log Out SAM &raquo;</a></p>

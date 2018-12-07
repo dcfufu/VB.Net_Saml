@@ -46,6 +46,18 @@ Namespace WebApplication7.Controllers
                 ViewBag.username = firstname & "  " & lastname
                 ViewBag.email = email
                 ViewBag.displayname = displayname
+
+                'json 字串轉換
+                Dim JsonStr = "{""user"":""John"", ""detail"":{""deposit"":""900000""}}"
+
+                '以NuGet安裝 => Install-Package Newtonsoft.Json 
+                '將json字串轉為JObject
+                Dim Obj As Newtonsoft.Json.Linq.JObject = Newtonsoft.Json.JsonConvert.DeserializeObject(JsonStr)
+
+                '取得物件的方法 依據階層 Obj.item("階層1")("階層2") 以此類推
+                Dim user As String = Obj.Item("user").ToString
+                Dim deposit As Integer = Obj.Item("detail")("deposit")
+                ViewBag.user_id_jsonTest = user + " - " + (deposit + 50000).ToString
             End If
 
             Return View()
